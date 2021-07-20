@@ -1,8 +1,23 @@
 const { rangeMap } = require('./maps')
 
+const getResistanceUnit = (byte) => {
+  const rawRange = rangeMap[byte & 0x38]
+  let unit = '㏀'
+
+  switch (rawRange) {
+    case 1:
+      unit = 'Ω';
+      break;
+    case 5:
+    case 6:
+      unit = '㏁'
+  }
+
+  return unit
+}
+
 const getUnit = (byte, mode) => {
   let unit = ''
-  console.log('getUnit(range): ', rangeMap[byte & 0x38])
 
   if(mode === 'VCC'|| mode === 'Diode/Continuity' || mode === 'VAC') {
     return 'V'
@@ -21,17 +36,8 @@ const getUnit = (byte, mode) => {
   }
 
   if(mode === 'Resistance') {
-    switch (rangeMap[byte & 0x38]) {
-      case 5:
-      case 6:
-        unit = '㏁'
-        break
-      default:
-        unit = '㏀'
-    }
-
-    return unit
-  } 
+    return getResistanceUnit(byte)
+  }
   
   if (mode === 'Capacitance') {
     if (rangeMap[byte & 0x38] < 4) {

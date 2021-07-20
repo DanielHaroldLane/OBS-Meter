@@ -4,10 +4,8 @@ const getRange = (byte, mode) => {
   let range = rangeMap[byte & 0x38]
 
   if (mode === 'Resistance') {
+    console.log(range)
     switch (range) {
-      case 1:
-        range = 3
-        break
       case 5:
       case 6:
         range = 1

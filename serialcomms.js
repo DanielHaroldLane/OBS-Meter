@@ -32,14 +32,11 @@ const decode = (data) => {
   }
 }
 
-//[137, 240, 192, 129, 80, 48, 48, 48, 48, 54, 48, 10] // serial data packet is 12 bytes
-
 const pollPorts = async () => {
   const ports = await getSerialPorts()
 
   const selectedPort = ports[ports.length - 1]
   const buffer = new Buffer.from([0x89])
-  console.log(selectedPort)
 
   const port = new SerialPort(
     selectedPort.path,
@@ -55,7 +52,6 @@ const pollPorts = async () => {
   port.on('data', async (data) => {
     const dataArr = Array.from(data)
     const decoded = decode(dataArr)
-    console.log(decoded)
 
     serialElement.innerText = decoded.value + ' ' + decoded.unit
     modeElement.innerText = decoded.mode

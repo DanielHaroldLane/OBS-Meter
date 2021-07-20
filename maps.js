@@ -7,6 +7,7 @@ const modeMap = {
   0xd0: 'Frequency',
   0xd8: 'Diode/Continuity',
   0xe0: 'Resistance',
+  0xe1: 'Resistance',
   0xe8: 'Millivolts',
   0xf0: 'VCC',
   0xf8: 'VAC',
