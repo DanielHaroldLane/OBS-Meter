@@ -1,7 +1,7 @@
 {
-  "name": "electron-serialport",
+  "name": "obs-meter",
   "version": "1.0.2",
-  "description": "A minimal Electron application with node serialport",
+  "description": "VC8145 Multimeter app",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -10,17 +10,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:serialport/electron-serialport.git"
+    "url": "git@github.com:DanielHaroldLane/OBS-Meter.git"
   },
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Daniel Lane",
   "devDependencies": {
     "electron": "^13.1.6",
     "electron-builder": "^22.11.7",
