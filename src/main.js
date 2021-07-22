@@ -14,14 +14,15 @@ let mainWindow;
 function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 600,
-    height: 200,
+    width: 310,
+    height: 80,
     backgroundColor: "#000",
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false, // workaround to allow use with Electron 12+
     },
     autoHideMenuBar: true,
+    resizable: false
   });
 
   // and load the index.html of the app.
@@ -34,7 +35,7 @@ function createWindow() {
   );
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  //mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on("closed", function () {

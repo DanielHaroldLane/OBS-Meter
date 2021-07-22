@@ -1,10 +1,10 @@
 {
   "name": "obs-meter",
   "version": "1.0.2",
-  "description": "VC8145 Multimeter app",
-  "main": "src/main.js",
+  "description": "OBS Multimeter app compatible with the VC8145 Multimeter",
+  "main": "main.js",
   "scripts": {
-    "start": "electron src/main.js",
+    "start": "electron src/main",
     "install": "electron-rebuild",
     "dist": "electron-builder"
   },
@@ -21,5 +21,6 @@
   "dependencies": {
     "serialport": "^9.2.0",
     "tableify": "^1.1.0"
-  }
+  },
+  "license": "MIT License - See LICENSE.md"
 }

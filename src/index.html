@@ -3,16 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>VC8145</title>
+    <title>OBS Meter</title>
     <style>
-        html { background-color: black; color: #fff; font-family: 'Courier New', Courier, monospace; font-size: xx-large;}
+        html {
+            background-color: black;
+            color: #e95d00;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: x-large;
+            overflow: hidden;
+        }
+
+        #unit:not(:empty) {
+            margin-left: -72px;
+        }
+
+        div {
+            margin: 5px;
+        }
+
+        #output {
+            display: none;
+        }
     </style>
+    <script type="text/javascript" src="segment-display.js"></script>
 </head>
 
 <body>
-    <div id="error"></div>
-    <div id="serial"></div>
-    <div id="mode"></div>
+    <div id="output">
+        <canvas id="display" width="280" height="34"></canvas>
+        <span id="unit"></span>
+        <canvas id="mode" width="280" height="34"></canvas>
+    </div>
+    <div id="ports">
+        <label for="comports">Com Port</label>
+
+        <select name="comports" id="com-select">
+            <option value="">--Please choose a port--</option>
+        </select>
+    </div>
 </body>
 
 <script src="./serialcomms.js"></script>
