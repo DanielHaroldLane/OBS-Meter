@@ -67,7 +67,7 @@ const getValue = (data, range) => {
 const decode = (data) => {
   const mode = modeMap[data[1]]
   const range = getRange(data[2], mode)
-  const sign = signMap[data[4]]
+  const sign = signMap[data[4] & 70]
   const unit = getUnit(data[2], mode)
   const value = getValue(data, range)
 
