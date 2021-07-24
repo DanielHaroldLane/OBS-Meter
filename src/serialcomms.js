@@ -1,10 +1,8 @@
 require('./segment-display')
 const SerialPort = require('serialport')
 const fs = require('fs')
-const { getUnit } = require('./units')
-const { getRange } = require('./range')
-const { rangeMap } = require('./maps')
-const { modeMap, signMap, digitMap, holdMap } = require('./maps')
+const { signMap, digitMap, holdMap, rangeMap } = require('./maps')
+const { meterFunctions } = require('./meter-functions')
 
 const output = document.getElementById('output')
 const portContainer = document.getElementById('ports')
@@ -57,40 +55,43 @@ const getValue = (data, range) => {
     parseDigit(data[9]),
   ]
 
-  if (values.includes('L')) {
-    return '  0L  '
-  }
-
-  return [...values.slice(0, range), '.', ...values.slice(range)].join('')
+  return values
 }
 
 const decode = (data) => {
-  const mode = modeMap[data[1]]
-  const range = getRange(data[2], mode)
-  const sign = signMap[data[4] & 70]
-  const hold = holdMap[data[4 & 0x3]]
-  const unit = getUnit(data[2], mode)
+  const meterFunction = meterFunctions[data[1]]
+  const range = meterFunction.ranges[rangeMap[data[2] & 0x7c]]
+  const sign = signMap[data[4] & 0x70]
+  const hold = holdMap[data[4] & 0x3]
   const value = getValue(data, range)
 
   return {
-    mode,
+    meterFunction,
     range,
+    hold,
     sign,
-    unit,
     value,
   }
 }
 
-const getPattern = (value) =>
-  value
-    .split('')
-    .map((char) => (char === '.' ? '.' : '#'))
-    .join('')
+const getPattern = (decoded) =>
+  [
+    ...new Array(decoded.range.decimalplace).fill('#'),
+    '.',
+    ...new Array(decoded.value.length - decoded.range.decimalplace).fill('#'),
+  ].join('')
 
-let ops = {}
-try {
-  ops = JSON.parse(fs.readFileSync('./ops.json', 'utf8')) || {}
-} catch (e) {}
+const getDisplayValue = (decoded) =>
+  decoded.range.decimalplace
+    ? [
+        ...decoded.value.slice(0, decoded.range.decimalplace),
+        '.',
+        ...decoded.value.slice(
+          decoded.range.decimalplace,
+          decoded.value.length
+        ),
+      ].join('')
+    : decoded.value.join('')
 
 const pollSerialData = async () => {
   const buffer = new Buffer.from([0x89])
@@ -106,58 +107,13 @@ const pollSerialData = async () => {
     false
   )
 
-  let mode,
-    range = null
-  try {
-    ops = JSON.parse(fs.readFileSync('./ops.json', 'utf8')) || {}
-  } catch (e) {}
-
   port.on('data', async (data) => {
     const dataArr = Array.from(data)
-
-    const hold = holdMap[dataArr[4] & 0x3]
-    console.log(hold)
-
-    let output = ''
-    dataArr.forEach((byte) => (output = output + ':' + byte.toString(16) + ' '))
-    console.log(output)
-
-    if (mode !== data[1]) {
-      try {
-        ops = JSON.parse(fs.readFileSync('./ops.json', 'utf8')) || {}
-      } catch (e) {}
-      mode = data[1]
-      ops = {
-        ...ops,
-        [mode]: { ...ops[mode] },
-      }
-
-      fs.writeFileSync('./ops.json', JSON.stringify(ops, null, '\t'), 'utf8')
-    }
-    if (range !== rangeMap[data[2]]) {
-      try {
-        ops = JSON.parse(fs.readFileSync('./ops.json', 'utf8')) || {}
-      } catch (e) {}
-      range = rangeMap[data[2]]
-      ops[mode] = {
-        ...ops[mode],
-        ranges: {
-          ...ops[mode].ranges,
-          [range]: {
-            ...(ops[mode].ranges ? ops[mode].ranges[range] : {}),
-          },
-        },
-      }
-
-      fs.writeFileSync('./ops.json', JSON.stringify(ops, null, '\t'), 'utf8')
-    }
-
-    // const decoded = decode(dataArr)
-
-    // display.pattern = getPattern(decoded.value)
-    // display.setValue(decoded.value)
-    // mode.setValue(`MODE: ${decoded.mode}`)
-    // unit.innerText = decoded.unit || ''
+    const decoded = decode(dataArr)
+    display.pattern = getPattern(decoded)
+    display.setValue(getDisplayValue(decoded))
+    mode.setValue(`MODE: ${decoded.meterFunction.label}`)
+    unit.innerText = decoded.range.unit || ''
     await port.write(buffer)
   })
 
