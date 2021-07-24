@@ -1,0 +1,272 @@
+{
+  "168": {
+    "label": "Amperage DC",
+    "ranges": {
+      "1": {
+        "range": "8A",
+        "resolution": "0.1mA",
+        "decimalplace": 1
+      },
+      "2": {
+        "range": "20A",
+        "resolution": "1mA",
+        "decimalplace": 2
+      }
+    }
+  },
+  "169": {
+    "label": "Amperage AC",
+    "ranges": {
+      "1": {
+        "range": "8A",
+        "resolution": "0.1mA",
+        "decimalplace": 1
+      },
+      "2": {
+        "range": "20A",
+        "resolution": "1mA",
+        "decimalplace": 2
+      }
+    }
+  },
+  "170": {
+    "label": "Amperage AC+DC",
+    "ranges": {
+      "1": {
+        "range": "8A",
+        "resolution": "0.1mA",
+        "decimalplace": 1
+      },
+      "2": {
+        "range": "20A",
+        "resolution": "1mA",
+        "decimalplace": 2
+      }
+    }
+  },
+  "171": {
+    "label": "Amperage AC",
+    "ranges": {
+      "1": {
+        "range": "8A",
+        "resolution": "0.1mA",
+        "decimalplace": 1
+      },
+      "2": {
+        "range": "20A",
+        "resolution": "1mA",
+        "decimalplace": 2
+      }
+    }
+  },
+  "176": {
+    "label": "Amperage DC",
+    "ranges": {
+      "1": {
+        "range": "80mA",
+        "resolution": "1µA",
+        "decimalplace": 2
+      },
+      "2": {
+        "range": "800mA",
+        "resolution": "10µA",
+        "decimalplace": 3
+      }
+    }
+  },
+  "177": {
+    "label": "Amperage AC",
+    "ranges": {
+      "1": {
+        "range": "80mA",
+        "resolution": "1µA",
+        "decimalplace": 2
+      },
+      "2": {
+        "range": "800mA",
+        "resolution": "10µA",
+        "decimalplace": 3
+      }
+    }
+  },
+  "178": {
+    "label": "Amperage AC+DC",
+    "ranges": {
+      "1": {
+        "range": "80mA",
+        "resolution": "1µA",
+        "decimalplace": 2
+      },
+      "2": {
+        "range": "800mA",
+        "resolution": "10µA",
+        "decimalplace": 3
+      }
+    }
+  },
+  "179": {
+    "label": "Amperage AC",
+    "ranges": {
+      "1": {
+        "range": "80mA",
+        "resolution": "1µA",
+        "decimalplace": 2
+      },
+      "2": {
+        "range": "800mA",
+        "resolution": "10µA",
+        "decimalplace": 3
+      }
+    }
+  },
+  "232": {
+    "label": "VCC",
+    "ranges": {
+      "1": {
+        "range": "80mV",
+        "resolution": "1µV",
+        "decimalplace": 2
+      },
+      "2": {
+        "range": "800mV",
+        "resolution": "10µV",
+        "decimalplace": 3
+      }
+    }
+  },
+  "233": {
+    "label": "VAC",
+    "ranges": {
+      "1": {
+        "range": "80mV",
+        "resolution": "1µV",
+        "decimalplace": 2
+      },
+      "2": {
+        "range": "800mV",
+        "resolution": "10µV",
+        "decimalplace": 3
+      }
+    }
+  },
+  "234": {
+    "label": "VCC dBm",
+    "ranges": {
+      "1": {
+        "range": "-80.00dBm ~ +80.00dBm",
+        "resolution": "0.01dBm",
+        "decimalplace": 2
+      }
+    }
+  },
+  "240": {
+    "label": "VCC",
+    "ranges": {
+      "1": {
+        "range": "8V",
+        "resolution": "0.1mV",
+        "decimalplace": 1
+      },
+      "2": {
+        "range": "80V",
+        "resolution": "1mV",
+        "decimalplace": 2
+      },
+      "3": {
+        "range": "800V",
+        "resolution": "10mV",
+        "decimalplace": 3
+      },
+      "4": {
+        "range": "1000V",
+        "resolution": "0.1V",
+        "decimalplace": 4
+      }
+    }
+  },
+  "241": {
+    "label": "VAC+VCC",
+    "ranges": {
+      "1": {
+        "range": "8V",
+        "resolution": "0.1mV",
+        "decimalplace": 1
+      },
+      "2": {
+        "range": "80V",
+        "resolution": "1mV",
+        "decimalplace": 2
+      },
+      "3": {
+        "range": "800V",
+        "resolution": "10mV",
+        "decimalplace": 3
+      },
+      "4": {
+        "range": "1000V",
+        "resolution": "0.1V",
+        "decimalplace": 4
+      }
+    }
+  },
+  "242": {
+    "label": "VCC dBm",
+    "ranges": {
+      "1": {
+        "range": "-80.00dBm ~ +80.00dBm",
+        "resolution": "0.01dBm",
+        "decimalplace": 2
+      }
+    }
+  },
+  "248": {
+    "label": "VAC",
+    "ranges": {
+      "1": {
+        "range": "8V",
+        "resolution": "0.1mV",
+        "decimalplace": 1
+      },
+      "2": {
+        "range": "80V",
+        "resolution": "1mV",
+        "decimalplace": 2
+      },
+      "3": {
+        "range": "750V",
+        "resolution": "10mV",
+        "decimalplace": 3
+      }
+    }
+  },
+  "249": {
+    "label": "VAC",
+    "ranges": {
+      "1": {
+        "range": "8V",
+        "resolution": "0.1mV",
+        "decimalplace": 1
+      },
+      "2": {
+        "range": "80V",
+        "resolution": "1mV",
+        "decimalplace": 2
+      },
+      "3": {
+        "range": "750V",
+        "resolution": "10mV",
+        "decimalplace": 3
+      }
+    }
+  },
+  "250": {
+    "label": "VAC dBM",
+    "ranges": {
+      "1": {
+        "range": "-80.00dBm ~ +80.00dBm",
+        "resolution": "0.01dBm",
+        "decimalplace": 2
+      }
+    }
+  }
+}

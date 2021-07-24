@@ -1,7 +1,9 @@
 require('./segment-display')
 const SerialPort = require('serialport')
+const fs = require('fs')
 const { getUnit } = require('./units')
 const { getRange } = require('./range')
+const { rangeMap } = require('./maps')
 const { modeMap, signMap, digitMap } = require('./maps')
 
 const output = document.getElementById('output')
@@ -78,7 +80,16 @@ const decode = (data) => {
   }
 }
 
-const getPattern = value => value.split('').map(char => char === '.' ? '.' : '#').join('')
+const getPattern = (value) =>
+  value
+    .split('')
+    .map((char) => (char === '.' ? '.' : '#'))
+    .join('')
+
+let ops = {}
+try {
+  ops = JSON.parse(fs.readFileSync('./ops.json', 'utf8')) || {}
+} catch (e) {}
 
 const pollSerialData = async () => {
   const buffer = new Buffer.from([0x89])
@@ -94,15 +105,50 @@ const pollSerialData = async () => {
     false
   )
 
+  let mode,
+    range = null
+  try {
+    ops = JSON.parse(fs.readFileSync('./ops.json', 'utf8')) || {}
+  } catch (e) {}
+
   port.on('data', async (data) => {
     const dataArr = Array.from(data)
+    if (mode !== data[1]) {
+      try {
+        ops = JSON.parse(fs.readFileSync('./ops.json', 'utf8')) || {}
+      } catch (e) {}
+      mode = data[1]
+      ops = {
+        ...ops,
+        [mode]: { ...ops[mode] },
+      }
+      console.log(ops)
+      fs.writeFileSync('./ops.json', JSON.stringify(ops, null, '\t'), 'utf8')
+    }
+    if (range !== rangeMap[data[2] & 0x38]) {
+      try {
+        ops = JSON.parse(fs.readFileSync('./ops.json', 'utf8')) || {}
+      } catch (e) {}
+      range = rangeMap[data[2] & 0x38]
+      ops[mode] = {
+        ...ops[mode],
+        ranges: {
+          ...ops[mode].ranges,
+          [range]: {
+            ...(ops[mode].ranges ? ops[mode].ranges[range] : {}),
+          },
+        },
+      }
+      console.log(ops)
+      fs.writeFileSync('./ops.json', JSON.stringify(ops, null, '\t'), 'utf8')
+    }
 
-    const decoded = decode(dataArr)
+    // const decoded = decode(dataArr)
 
-    display.pattern = getPattern(decoded.value)
-    display.setValue(decoded.value)
-    mode.setValue(`MODE: ${decoded.mode}`)
-    unit.innerText = decoded.unit || ''
+    // display.pattern = getPattern(decoded.value)
+    // display.setValue(decoded.value)
+    // mode.setValue(`MODE: ${decoded.mode}`)
+    // unit.innerText = decoded.unit || ''
     await port.write(buffer)
   })
 
@@ -112,8 +158,8 @@ const pollSerialData = async () => {
 const getPorts = async () => {
   const ports = await getSerialPorts()
 
-  ports.forEach(port => {
-    const option = document.createElement('option');
+  ports.forEach((port) => {
+    const option = document.createElement('option')
     option.text = port.path
     portSelector.add(option)
   })
