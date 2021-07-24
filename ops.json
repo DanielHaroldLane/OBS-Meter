@@ -256,6 +256,16 @@
       }
     }
   },
+  "210": {
+    "ranges": {
+      "1": {
+        "range": "99999 RPM",
+        "resolution": "1 RPM",
+        "decimalplace": 2,
+        "unit": "RPM"
+      }
+    }
+  },
   "216": {
     "label": "Diode/Continuity",
     "ranges": {
