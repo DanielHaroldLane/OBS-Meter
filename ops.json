@@ -198,6 +198,64 @@
       }
     }
   },
+  "208": {
+    "label": "Frequency MHz",
+    "ranges": {
+      "1": {
+        "range": "10.0 MHz",
+        "resolution": "1 kHz",
+        "decimalplace": 2,
+        "unit": "MHz"
+      },
+      "2": {
+        "range": "100.0 MHz",
+        "resolution": "10 kHz",
+        "decimalplace": 3,
+        "unit": "MHz"
+      },
+      "3": {
+        "range": "1000.0 MHz",
+        "resolution": "100 kHz",
+        "decimalplace": 4,
+        "unit": "MHz"
+      }
+    }
+  },
+  "209": {
+    "label": "Frequency",
+    "ranges": {
+      "1": {
+        "range": "999.99 Hz",
+        "resolution": "0.01 Hz",
+        "decimalplace": 3,
+        "unit": "Hz"
+      },
+      "2": {
+        "range": "9.9999 kHz",
+        "resolution": "0.1 Hz",
+        "decimalplace": 1,
+        "unit": "kHz"
+      },
+      "3": {
+        "range": "99.999 kHz",
+        "resolution": "1 Hz",
+        "decimalplace": 2,
+        "unit": "kHz"
+      },
+      "4": {
+        "range": "999.99 kHz",
+        "resolution": "10 Hz",
+        "decimalplace": 2,
+        "unit": "kHz"
+      },
+      "5": {
+        "range": "8.0000 MHz",
+        "resolution": "100 Hz",
+        "decimalplace": 1,
+        "unit": "MHz"
+      }
+    }
+  },
   "216": {
     "label": "Diode/Continuity",
     "ranges": {
