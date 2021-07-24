@@ -35,17 +35,38 @@ const digitMap = {
 } // digits displayed on screen
 
 const rangeMap = {
-  0x0: 1,
-  0x08: 2,
-  0x10: 3,
-  0x18: 4,
-  0x20: 5,
-  0x28: 6,
-} // range digits, used to represent the precision of a number
+  0x80: 1,
+  0x88: 2,
+  0x90: 3,
+  0x98: 4,
+  0xa0: 5,
+  0xa8: 6,
+  0xb0: 7,
+  0xb8: 8,
+  0xc0: 9,
+  0xc8: 10,
+  0xd0: 11,
+  0xd8: 12,
+  0xe0: 13,
+  0xe8: 14,
+  0xf0: 15,
+  0xf8: 16,
+}
+
+// const rangeMap = {
+//   0x0: 1,
+//   0x08: 2,
+//   0x10: 3,
+//   0x18: 4,
+//   0x20: 5,
+//   0x28: 6,
+//   0x30: 7,
+//   0x38: 8,
+// } // range digits, used to represent the precision of a number
 
 module.exports = {
   modeMap,
   signMap,
   digitMap,
-  rangeMap
+  rangeMap,
 }

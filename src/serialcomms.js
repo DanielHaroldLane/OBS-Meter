@@ -113,6 +113,11 @@ const pollSerialData = async () => {
 
   port.on('data', async (data) => {
     const dataArr = Array.from(data)
+
+    let output = ''
+    dataArr.forEach((byte) => (output = output + ':' + byte.toString(16) + ' '))
+    console.log(output)
+
     if (mode !== data[1]) {
       try {
         ops = JSON.parse(fs.readFileSync('./ops.json', 'utf8')) || {}
@@ -122,14 +127,14 @@ const pollSerialData = async () => {
         ...ops,
         [mode]: { ...ops[mode] },
       }
-      console.log(ops)
+
       fs.writeFileSync('./ops.json', JSON.stringify(ops, null, '\t'), 'utf8')
     }
-    if (range !== rangeMap[data[2] & 0x38]) {
+    if (range !== rangeMap[data[2]]) {
       try {
         ops = JSON.parse(fs.readFileSync('./ops.json', 'utf8')) || {}
       } catch (e) {}
-      range = rangeMap[data[2] & 0x38]
+      range = rangeMap[data[2]]
       ops[mode] = {
         ...ops[mode],
         ranges: {
@@ -139,7 +144,7 @@ const pollSerialData = async () => {
           },
         },
       }
-      console.log(ops)
+
       fs.writeFileSync('./ops.json', JSON.stringify(ops, null, '\t'), 'utf8')
     }
 

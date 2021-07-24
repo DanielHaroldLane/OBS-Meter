@@ -1,7 +1,7 @@
 const { rangeMap } = require('./maps')
 
 const getRange = (byte, mode) => {
-  let range = rangeMap[byte & 0x38]
+  let range = rangeMap[byte]
 
   if (mode === 'Resistance') {
     switch (range) {
@@ -29,5 +29,5 @@ const getRange = (byte, mode) => {
 }
 
 module.exports = {
-  getRange
+  getRange,
 }
