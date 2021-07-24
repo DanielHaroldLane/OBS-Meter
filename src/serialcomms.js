@@ -1,8 +1,7 @@
 require('./segment-display')
 const SerialPort = require('serialport')
-const { getUnit } = require('./units')
-const { getRange } = require('./range')
-const { modeMap, signMap, digitMap } = require('./maps')
+const { signMap, digitMap, holdMap, rangeMap } = require('./maps')
+const { meterFunctions } = require('./meter-functions')
 
 const output = document.getElementById('output')
 const portContainer = document.getElementById('ports')
@@ -55,30 +54,45 @@ const getValue = (data, range) => {
     parseDigit(data[9]),
   ]
 
-  if (values.includes('L')) {
-    return '  0L  '
-  }
-
-  return [...values.slice(0, range), '.', ...values.slice(range)].join('')
+  return values
 }
 
 const decode = (data) => {
-  const mode = modeMap[data[1]]
-  const range = getRange(data[2], mode)
-  const sign = signMap[data[4]]
-  const unit = getUnit(data[2], mode)
+  const meterFunction = meterFunctions[data[1]]
+  const range = meterFunction.ranges[rangeMap[data[2] & 0x7c]]
+  const sign = signMap[data[4] & 0x70]
+  const hold = holdMap[data[4] & 0x3]
   const value = getValue(data, range)
 
   return {
-    mode,
+    meterFunction,
     range,
+    hold,
     sign,
-    unit,
     value,
   }
 }
 
-const getPattern = value => value.split('').map(char => char === '.' ? '.' : '#').join('')
+const getPattern = (decoded) =>
+  '#' +
+  [
+    ...new Array(decoded.range.decimalplace).fill('#'),
+    '.',
+    ...new Array(decoded.value.length - decoded.range.decimalplace).fill('#'),
+  ].join('')
+
+const getDisplayValue = (decoded) =>
+  (decoded.sign === '-' ? '-' : ' ') +
+  (decoded.range.decimalplace
+    ? [
+        ...decoded.value.slice(0, decoded.range.decimalplace),
+        '.',
+        ...decoded.value.slice(
+          decoded.range.decimalplace,
+          decoded.value.length
+        ),
+      ].join('')
+    : decoded.value.join(''))
 
 const pollSerialData = async () => {
   const buffer = new Buffer.from([0x89])
@@ -96,13 +110,15 @@ const pollSerialData = async () => {
 
   port.on('data', async (data) => {
     const dataArr = Array.from(data)
-
     const decoded = decode(dataArr)
 
-    display.pattern = getPattern(decoded.value)
-    display.setValue(decoded.value)
-    mode.setValue(`MODE: ${decoded.mode}`)
-    unit.innerText = decoded.unit || ''
+    const displayPattern = getPattern(decoded)
+    const displayValue = getDisplayValue(decoded)
+
+    display.pattern = displayPattern
+    display.setValue(displayValue)
+    mode.setValue(`MODE: ${decoded.meterFunction.label}`)
+    unit.innerText = decoded.range.unit || ''
     await port.write(buffer)
   })
 
@@ -112,8 +128,8 @@ const pollSerialData = async () => {
 const getPorts = async () => {
   const ports = await getSerialPorts()
 
-  ports.forEach(port => {
-    const option = document.createElement('option');
+  ports.forEach((port) => {
+    const option = document.createElement('option')
     option.text = port.path
     portSelector.add(option)
   })

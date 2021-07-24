@@ -2,7 +2,7 @@
   "name": "obs-meter",
   "version": "1.0.2",
   "description": "OBS Multimeter app compatible with the VC8145 Multimeter",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron src/main",
     "install": "electron-rebuild",

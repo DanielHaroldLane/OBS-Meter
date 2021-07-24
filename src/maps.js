@@ -1,22 +1,14 @@
-const modeMap = {
-  0xa0: 'Generator',
-  0xa8: 'Current A',
-  0xb0: 'Current mA',
-  0xc0: 'Temperature',
-  0xc8: 'Capacitance',
-  0xd0: 'Frequency',
-  0xd8: 'Diode/Continuity',
-  0xe0: 'Resistance',
-  0xe1: 'Resistance',
-  0xe8: 'Millivolts',
-  0xf0: 'VCC',
-  0xf8: 'VAC',
+const signMap = {
+  0x00: ' ', // unsigned sign (lol)
+  0x40: ' ', // positive sign
+  0x50: '-', // negative sign
 }
 
-const signMap = {
-  0x0: 'unsigned', // not sure what this is for
-  0x40: '', // positive sign
-  0x50: '-', // negative sign
+const holdMap = {
+  0x00: '',
+  0x01: 'Auto Hold',
+  0x02: 'Peak + Hold',
+  0x03: 'Peak - Hold',
 }
 
 const digitMap = {
@@ -41,11 +33,21 @@ const rangeMap = {
   0x18: 4,
   0x20: 5,
   0x28: 6,
-} // range digits, used to represent the precision of a number
+  0x30: 7,
+  0x38: 8,
+  0x40: 9,
+  0x48: 10,
+  0x50: 11,
+  0x58: 12,
+  0x60: 13,
+  0x68: 14,
+  0x70: 15,
+  0x78: 16,
+}
 
 module.exports = {
-  modeMap,
   signMap,
   digitMap,
-  rangeMap
+  rangeMap,
+  holdMap,
 }
