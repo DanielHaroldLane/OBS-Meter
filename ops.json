@@ -1,22 +1,103 @@
 {
   "160": {
+    "label": "Function Generator ⎍⎍",
     "ranges": {
-      "1": {},
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {},
-      "16": {}
+      "1": {
+        "range": "0.5 Hz",
+        "resolution": "0.0001 Hz",
+        "decimalplace": 1,
+        "unit": "Hz"
+      },
+      "2": {
+        "range": "1 Hz",
+        "resolution": "0.0001 Hz",
+        "decimalplace": 1,
+        "unit": "Hz"
+      },
+      "3": {
+        "range": "2 Hz",
+        "resolution": "0.0001 Hz",
+        "decimalplace": 1,
+        "unit": "Hz"
+      },
+      "4": {
+        "range": "10 Hz",
+        "resolution": "0.001 Hz",
+        "decimalplace": 2,
+        "unit": "Hz"
+      },
+      "5": {
+        "range": "50 Hz",
+        "resolution": "0.001 Hz",
+        "decimalplace": 2,
+        "unit": "Hz"
+      },
+      "6": {
+        "range": "60.240 Hz",
+        "resolution": "0.001 Hz",
+        "decimalplace": 2,
+        "unit": "Hz"
+      },
+      "7": {
+        "range": "74.63 Hz",
+        "resolution": "0.01 Hz",
+        "decimalplace": 3,
+        "unit": "Hz"
+      },
+      "8": {
+        "range": "100.00 Hz",
+        "resolution": "0.1 Hz",
+        "decimalplace": 3,
+        "unit": "Hz"
+      },
+      "9": {
+        "range": "151.50 Hz",
+        "resolution": "0.1 Hz",
+        "decimalplace": 3,
+        "unit": "Hz"
+      },
+      "10": {
+        "range": "200.00 Hz",
+        "resolution": "0.1 Hz",
+        "decimalplace": 3,
+        "unit": "Hz"
+      },
+      "11": {
+        "range": "303.00 Hz",
+        "resolution": "0.1 Hz",
+        "decimalplace": 3,
+        "unit": "Hz"
+      },
+      "12": {
+        "range": "606.10 Hz",
+        "resolution": "0.1 Hz",
+        "decimalplace": 3,
+        "unit": "Hz"
+      },
+      "13": {
+        "range": "1.2500 kHz",
+        "resolution": "0.0001 Hz",
+        "decimalplace": 1,
+        "unit": "kHz"
+      },
+      "14": {
+        "range": "1.6660 kHz",
+        "resolution": "0.0001 Hz",
+        "decimalplace": 1,
+        "unit": "kHz"
+      },
+      "15": {
+        "range": "2.5000 kHz",
+        "resolution": "0.0001 Hz",
+        "decimalplace": 1,
+        "unit": "kHz"
+      },
+      "16": {
+        "range": "5.0000 kHz",
+        "resolution": "0.0001 Hz",
+        "decimalplace": 1,
+        "unit": "kHz"
+      }
     }
   },
   "168": {

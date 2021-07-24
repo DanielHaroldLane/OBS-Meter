@@ -4,7 +4,7 @@ const fs = require('fs')
 const { getUnit } = require('./units')
 const { getRange } = require('./range')
 const { rangeMap } = require('./maps')
-const { modeMap, signMap, digitMap } = require('./maps')
+const { modeMap, signMap, digitMap, holdMap } = require('./maps')
 
 const output = document.getElementById('output')
 const portContainer = document.getElementById('ports')
@@ -68,6 +68,7 @@ const decode = (data) => {
   const mode = modeMap[data[1]]
   const range = getRange(data[2], mode)
   const sign = signMap[data[4] & 70]
+  const hold = holdMap[data[4 & 0x3]]
   const unit = getUnit(data[2], mode)
   const value = getValue(data, range)
 
@@ -113,6 +114,9 @@ const pollSerialData = async () => {
 
   port.on('data', async (data) => {
     const dataArr = Array.from(data)
+
+    const hold = holdMap[dataArr[4] & 0x3]
+    console.log(hold)
 
     let output = ''
     dataArr.forEach((byte) => (output = output + ':' + byte.toString(16) + ' '))

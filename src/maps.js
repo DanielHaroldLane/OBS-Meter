@@ -14,9 +14,16 @@ const modeMap = {
 }
 
 const signMap = {
-  0x0: 'unsigned', // not sure what this is for
+  0x00: 'unsigned', // not sure what this is for
   0x40: '', // positive sign
   0x50: '-', // negative sign
+}
+
+const holdMap = {
+  0x00: '',
+  0x01: 'Auto Hold',
+  0x02: 'Peak + Hold',
+  0x03: 'Peak - Hold',
 }
 
 const digitMap = {
@@ -53,20 +60,10 @@ const rangeMap = {
   0xf8: 16,
 }
 
-// const rangeMap = {
-//   0x0: 1,
-//   0x08: 2,
-//   0x10: 3,
-//   0x18: 4,
-//   0x20: 5,
-//   0x28: 6,
-//   0x30: 7,
-//   0x38: 8,
-// } // range digits, used to represent the precision of a number
-
 module.exports = {
   modeMap,
   signMap,
   digitMap,
   rangeMap,
+  holdMap,
 }
