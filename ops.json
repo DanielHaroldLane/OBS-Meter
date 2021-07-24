@@ -157,6 +157,47 @@
       }
     }
   },
+  "200": {
+    "label": "Capacitance",
+    "ranges": {
+      "1": {
+        "range": "1nF",
+        "resolution": "1pF",
+        "decimalplace": 1,
+        "unit": "nF"
+      },
+      "2": {
+        "range": "10nF",
+        "resolution": "10pF",
+        "decimalplace": 2,
+        "unit": "nF"
+      },
+      "3": {
+        "range": "100nF",
+        "resolution": "100pF",
+        "decimalplace": 3,
+        "unit": "nF"
+      },
+      "4": {
+        "range": "1uF",
+        "resolution": "1nF",
+        "decimalplace": 1,
+        "unit": "uF"
+      },
+      "5": {
+        "range": "10uF",
+        "resolution": "10nF",
+        "decimalplace": 2,
+        "unit": "uF"
+      },
+      "6": {
+        "range": "100uF",
+        "resolution": "100nF",
+        "decimalplace": 3,
+        "unit": "uF"
+      }
+    }
+  },
   "216": {
     "label": "Diode/Continuity",
     "ranges": {
