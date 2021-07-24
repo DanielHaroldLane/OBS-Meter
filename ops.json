@@ -1,512 +1,522 @@
 {
-  "160": {
-    "ranges": {
-      "1": {},
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {},
-      "7": {},
-      "8": {},
-      "9": {},
-      "10": {},
-      "11": {},
-      "12": {},
-      "13": {},
-      "14": {},
-      "15": {},
-      "16": {}
-    }
-  },
-  "168": {
-    "label": "Amperage DC",
-    "ranges": {
-      "1": {
-        "range": "8A",
-        "resolution": "0.1mA",
-        "decimalplace": 1,
-        "unit": "A"
-      },
-      "2": {
-        "range": "20A",
-        "resolution": "1mA",
-        "decimalplace": 2,
-        "unit": "A"
-      }
-    }
-  },
-  "169": {
-    "label": "Amperage AC",
-    "ranges": {
-      "1": {
-        "range": "8A",
-        "resolution": "0.1mA",
-        "decimalplace": 1,
-        "unit": "A"
-      },
-      "2": {
-        "range": "20A",
-        "resolution": "1mA",
-        "decimalplace": 2,
-        "unit": "A"
-      }
-    }
-  },
-  "170": {
-    "label": "Amperage AC+DC",
-    "ranges": {
-      "1": {
-        "range": "8A",
-        "resolution": "0.1mA",
-        "decimalplace": 1,
-        "unit": "A"
-      },
-      "2": {
-        "range": "20A",
-        "resolution": "1mA",
-        "decimalplace": 2,
-        "unit": "A"
-      }
-    }
-  },
-  "171": {
-    "label": "Amperage AC",
-    "ranges": {
-      "1": {
-        "range": "8A",
-        "resolution": "0.1mA",
-        "decimalplace": 1,
-        "unit": "A"
-      },
-      "2": {
-        "range": "20A",
-        "resolution": "1mA",
-        "decimalplace": 2,
-        "unit": "A"
-      }
-    }
-  },
-  "176": {
-    "label": "Amperage DC",
-    "ranges": {
-      "1": {
-        "range": "80mA",
-        "resolution": "1µA",
-        "decimalplace": 2,
-        "unit": "mA"
-      },
-      "2": {
-        "range": "800mA",
-        "resolution": "10µA",
-        "decimalplace": 3,
-        "unit": "mA"
-      }
-    }
-  },
-  "177": {
-    "label": "Amperage AC",
-    "ranges": {
-      "1": {
-        "range": "80mA",
-        "resolution": "1µA",
-        "decimalplace": 2,
-        "unit": "mA"
-      },
-      "2": {
-        "range": "800mA",
-        "resolution": "10µA",
-        "decimalplace": 3,
-        "unit": "mA"
-      }
-    }
-  },
-  "178": {
-    "label": "Amperage AC+DC",
-    "ranges": {
-      "1": {
-        "range": "80mA",
-        "resolution": "1µA",
-        "decimalplace": 2,
-        "unit": "mA"
-      },
-      "2": {
-        "range": "800mA",
-        "resolution": "10µA",
-        "decimalplace": 3,
-        "unit": "mA"
-      }
-    }
-  },
-  "179": {
-    "label": "Amperage AC",
-    "ranges": {
-      "1": {
-        "range": "80mA",
-        "resolution": "1µA",
-        "decimalplace": 2,
-        "unit": "mA"
-      },
-      "2": {
-        "range": "800mA",
-        "resolution": "10µA",
-        "decimalplace": 3,
-        "unit": "mA"
-      }
-    }
-  },
-  "192": {
-    "label": "Temperature",
-    "ranges": {
-      "1": {
-        "range": "-50℃ ~ 1372℃",
-        "resolution": "0.1℃",
-        "decimalplace": 2,
-        "unit": "℃"
-      }
-    }
-  },
-  "193": {
-    "label": "Temperature",
-    "ranges": {
-      "1": {
-        "range": "-50℃ ~ 1372℃",
-        "resolution": "0.1℃",
-        "decimalplace": 4,
-        "unit": "℃"
-      }
-    }
-  },
-  "200": {
-    "label": "Capacitance",
-    "ranges": {
-      "1": {
-        "range": "1nF",
-        "resolution": "1pF",
-        "decimalplace": 1,
-        "unit": "nF"
-      },
-      "2": {
-        "range": "10nF",
-        "resolution": "10pF",
-        "decimalplace": 2,
-        "unit": "nF"
-      },
-      "3": {
-        "range": "100nF",
-        "resolution": "100pF",
-        "decimalplace": 3,
-        "unit": "nF"
-      },
-      "4": {
-        "range": "1uF",
-        "resolution": "1nF",
-        "decimalplace": 1,
-        "unit": "uF"
-      },
-      "5": {
-        "range": "10uF",
-        "resolution": "10nF",
-        "decimalplace": 2,
-        "unit": "uF"
-      },
-      "6": {
-        "range": "100uF",
-        "resolution": "100nF",
-        "decimalplace": 3,
-        "unit": "uF"
-      }
-    }
-  },
-  "208": {
-    "label": "Frequency MHz",
-    "ranges": {
-      "1": {
-        "range": "10.0 MHz",
-        "resolution": "1 kHz",
-        "decimalplace": 2,
-        "unit": "MHz"
-      },
-      "2": {
-        "range": "100.0 MHz",
-        "resolution": "10 kHz",
-        "decimalplace": 3,
-        "unit": "MHz"
-      },
-      "3": {
-        "range": "1000.0 MHz",
-        "resolution": "100 kHz",
-        "decimalplace": 4,
-        "unit": "MHz"
-      }
-    }
-  },
-  "209": {
-    "label": "Frequency",
-    "ranges": {
-      "1": {
-        "range": "999.99 Hz",
-        "resolution": "0.01 Hz",
-        "decimalplace": 3,
-        "unit": "Hz"
-      },
-      "2": {
-        "range": "9.9999 kHz",
-        "resolution": "0.1 Hz",
-        "decimalplace": 1,
-        "unit": "kHz"
-      },
-      "3": {
-        "range": "99.999 kHz",
-        "resolution": "1 Hz",
-        "decimalplace": 2,
-        "unit": "kHz"
-      },
-      "4": {
-        "range": "999.99 kHz",
-        "resolution": "10 Hz",
-        "decimalplace": 2,
-        "unit": "kHz"
-      },
-      "5": {
-        "range": "8.0000 MHz",
-        "resolution": "100 Hz",
-        "decimalplace": 1,
-        "unit": "MHz"
-      }
-    }
-  },
-  "210": {
-    "ranges": {
-      "1": {
-        "range": "99999 RPM",
-        "resolution": "1 RPM",
-        "decimalplace": 2,
-        "unit": "RPM"
-      }
-    }
-  },
-  "216": {
-    "label": "Diode/Continuity",
-    "ranges": {
-      "1": {
-        "range": "0~3V",
-        "resolution": "0.0001 V",
-        "decimalplace": 1,
-        "unit": "V"
-      }
-    }
-  },
-  "224": {
-    "label": "Resistance",
-    "ranges": {
-      "1": {
-        "range": "800 Ω",
+	"160": {
+		"ranges": {
+			"1": {},
+			"2": {},
+			"3": {},
+			"4": {},
+			"5": {},
+			"6": {},
+			"7": {},
+			"8": {},
+			"9": {},
+			"10": {},
+			"11": {},
+			"12": {},
+			"13": {},
+			"14": {},
+			"15": {},
+			"16": {}
+		}
+	},
+	"168": {
+		"label": "Amperage DC",
+		"ranges": {
+			"1": {
+				"range": "8A",
+				"resolution": "0.1mA",
+				"decimalplace": 1,
+				"unit": "A"
+			},
+			"2": {
+				"range": "20A",
+				"resolution": "1mA",
+				"decimalplace": 2,
+				"unit": "A"
+			}
+		}
+	},
+	"169": {
+		"label": "Amperage AC",
+		"ranges": {
+			"1": {
+				"range": "8A",
+				"resolution": "0.1mA",
+				"decimalplace": 1,
+				"unit": "A"
+			},
+			"2": {
+				"range": "20A",
+				"resolution": "1mA",
+				"decimalplace": 2,
+				"unit": "A"
+			}
+		}
+	},
+	"170": {
+		"label": "Amperage AC+DC",
+		"ranges": {
+			"1": {
+				"range": "8A",
+				"resolution": "0.1mA",
+				"decimalplace": 1,
+				"unit": "A"
+			},
+			"2": {
+				"range": "20A",
+				"resolution": "1mA",
+				"decimalplace": 2,
+				"unit": "A"
+			}
+		}
+	},
+	"171": {
+		"label": "Amperage AC",
+		"ranges": {
+			"1": {
+				"range": "8A",
+				"resolution": "0.1mA",
+				"decimalplace": 1,
+				"unit": "A"
+			},
+			"2": {
+				"range": "20A",
+				"resolution": "1mA",
+				"decimalplace": 2,
+				"unit": "A"
+			}
+		}
+	},
+	"176": {
+		"label": "Amperage DC",
+		"ranges": {
+			"1": {
+				"range": "80mA",
+				"resolution": "1µA",
+				"decimalplace": 2,
+				"unit": "mA"
+			},
+			"2": {
+				"range": "800mA",
+				"resolution": "10µA",
+				"decimalplace": 3,
+				"unit": "mA"
+			}
+		}
+	},
+	"177": {
+		"label": "Amperage AC",
+		"ranges": {
+			"1": {
+				"range": "80mA",
+				"resolution": "1µA",
+				"decimalplace": 2,
+				"unit": "mA"
+			},
+			"2": {
+				"range": "800mA",
+				"resolution": "10µA",
+				"decimalplace": 3,
+				"unit": "mA"
+			}
+		}
+	},
+	"178": {
+		"label": "Amperage AC+DC",
+		"ranges": {
+			"1": {
+				"range": "80mA",
+				"resolution": "1µA",
+				"decimalplace": 2,
+				"unit": "mA"
+			},
+			"2": {
+				"range": "800mA",
+				"resolution": "10µA",
+				"decimalplace": 3,
+				"unit": "mA"
+			}
+		}
+	},
+	"179": {
+		"label": "Amperage AC",
+		"ranges": {
+			"1": {
+				"range": "80mA",
+				"resolution": "1µA",
+				"decimalplace": 2,
+				"unit": "mA"
+			},
+			"2": {
+				"range": "800mA",
+				"resolution": "10µA",
+				"decimalplace": 3,
+				"unit": "mA"
+			}
+		}
+	},
+	"192": {
+		"label": "Temperature",
+		"ranges": {
+			"1": {
+				"range": "-50℃ ~ 1372℃",
+				"resolution": "0.1℃",
+				"decimalplace": 2,
+				"unit": "℃"
+			}
+		}
+	},
+	"193": {
+		"label": "Temperature",
+		"ranges": {
+			"1": {
+				"range": "-50℃ ~ 1372℃",
+				"resolution": "0.1℃",
+				"decimalplace": 4,
+				"unit": "℃"
+			}
+		}
+	},
+	"200": {
+		"label": "Capacitance",
+		"ranges": {
+			"1": {
+				"range": "1nF",
+				"resolution": "1pF",
+				"decimalplace": 1,
+				"unit": "nF"
+			},
+			"2": {
+				"range": "10nF",
+				"resolution": "10pF",
+				"decimalplace": 2,
+				"unit": "nF"
+			},
+			"3": {
+				"range": "100nF",
+				"resolution": "100pF",
+				"decimalplace": 3,
+				"unit": "nF"
+			},
+			"4": {
+				"range": "1uF",
+				"resolution": "1nF",
+				"decimalplace": 1,
+				"unit": "uF"
+			},
+			"5": {
+				"range": "10uF",
+				"resolution": "10nF",
+				"decimalplace": 2,
+				"unit": "uF"
+			},
+			"6": {
+				"range": "100uF",
+				"resolution": "100nF",
+				"decimalplace": 3,
+				"unit": "uF"
+			}
+		}
+	},
+	"208": {
+		"label": "Frequency MHz",
+		"ranges": {
+			"1": {
+				"range": "10.0 MHz",
+				"resolution": "1 kHz",
+				"decimalplace": 2,
+				"unit": "MHz"
+			},
+			"2": {
+				"range": "100.0 MHz",
+				"resolution": "10 kHz",
+				"decimalplace": 3,
+				"unit": "MHz"
+			},
+			"3": {
+				"range": "1000.0 MHz",
+				"resolution": "100 kHz",
+				"decimalplace": 4,
+				"unit": "MHz"
+			}
+		}
+	},
+	"209": {
+		"label": "Frequency",
+		"ranges": {
+			"1": {
+				"range": "999.99 Hz",
+				"resolution": "0.01 Hz",
+				"decimalplace": 3,
+				"unit": "Hz"
+			},
+			"2": {
+				"range": "9.9999 kHz",
+				"resolution": "0.1 Hz",
+				"decimalplace": 1,
+				"unit": "kHz"
+			},
+			"3": {
+				"range": "99.999 kHz",
+				"resolution": "1 Hz",
+				"decimalplace": 2,
+				"unit": "kHz"
+			},
+			"4": {
+				"range": "999.99 kHz",
+				"resolution": "10 Hz",
+				"decimalplace": 2,
+				"unit": "kHz"
+			},
+			"5": {
+				"range": "8.0000 MHz",
+				"resolution": "100 Hz",
+				"decimalplace": 1,
+				"unit": "MHz"
+			}
+		}
+	},
+	"210": {
+		"ranges": {
+			"1": {
+				"range": "99999 RPM",
+				"resolution": "1 RPM",
+				"decimalplace": 2,
+				"unit": "RPM"
+			}
+		}
+	},
+	"216": {
+		"label": "Diode/Continuity (Auto)",
+		"ranges": {
+			"1": {
+				"range": "0~3V",
+				"resolution": "0.0001 V",
+				"decimalplace": 1,
+				"unit": "V"
+			}
+		}
+	},
+	"224": {
+		"label": "Resistance",
+		"ranges": {
+			"1": {
+				"range": "800 Ω",
+				"resolution": "0.01 Ω",
+				"decimalplace": 3,
+				"unit": "Ω"
+			},
+			"2": {
+				"range": "8 kΩ",
+				"resolution": "0.1 Ω",
+				"decimalplace": 1,
+				"unit": "kΩ"
+			},
+			"3": {
+				"range": "80 kΩ",
+				"resolution": "1 Ω",
+				"decimalplace": 2,
+				"unit": "kΩ"
+			},
+			"4": {
+				"range": "800 kΩ",
+				"resolution": "10 Ω",
+				"decimalplace": 3,
+				"unit": "kΩ"
+			},
+			"5": {
+				"range": "8 MΩ",
+				"resolution": "100 Ω",
+				"decimalplace": 1,
+				"unit": "MΩ"
+			},
+			"6": {
+				"range": "80 MΩ",
+				"resolution": "1 kΩ",
+				"decimalplace": 2,
+				"unit": "MΩ"
+			}
+	},
+	"225": {
+		"label": "Continuity",
+		"ranges": {
+			"1": {
+        "range": "50 Ω",
         "resolution": "0.01 Ω",
         "decimalplace": 3,
         "unit": "Ω"
-      },
-      "2": {
-        "range": "8 kΩ",
-        "resolution": "0.1 Ω",
-        "decimalplace": 1,
-        "unit": "kΩ"
-      },
-      "3": {
-        "range": "80 kΩ",
-        "resolution": "1 Ω",
-        "decimalplace": 2,
-        "unit": "kΩ"
-      },
-      "4": {
-        "range": "800 kΩ",
-        "resolution": "10 Ω",
-        "decimalplace": 3,
-        "unit": "kΩ"
-      },
-      "5": {
-        "range": "8 MΩ",
-        "resolution": "100 Ω",
-        "decimalplace": 1,
-        "unit": "MΩ"
-      },
-      "6": {
-        "range": "80 MΩ",
-        "resolution": "1 kΩ",
-        "decimalplace": 2,
-        "unit": "MΩ"
       }
-    }
-  },
-  "232": {
-    "label": "VCC",
-    "ranges": {
-      "1": {
-        "range": "80mV",
-        "resolution": "1µV",
-        "decimalplace": 2,
-        "unit": "mV"
-      },
-      "2": {
-        "range": "800mV",
-        "resolution": "10µV",
-        "decimalplace": 3,
-        "unit": "mV"
-      }
-    }
-  },
-  "233": {
-    "label": "VAC",
-    "ranges": {
-      "1": {
-        "range": "80mV",
-        "resolution": "1µV",
-        "decimalplace": 2,
-        "unit": "mV"
-      },
-      "2": {
-        "range": "800mV",
-        "resolution": "10µV",
-        "decimalplace": 3,
-        "unit": "mV"
-      }
-    }
-  },
-  "234": {
-    "label": "VCC dBm",
-    "ranges": {
-      "1": {
-        "range": "-80.00dBm ~ +80.00dBm",
-        "resolution": "0.01dBm",
-        "decimalplace": 2,
-        "unit": "Hz"
-      }
-    }
-  },
-  "240": {
-    "label": "VCC",
-    "ranges": {
-      "1": {
-        "range": "8V",
-        "resolution": "0.1mV",
-        "decimalplace": 1,
-        "unit": "V"
-      },
-      "2": {
-        "range": "80V",
-        "resolution": "1mV",
-        "decimalplace": 2,
-        "unit": "V"
-      },
-      "3": {
-        "range": "800V",
-        "resolution": "10mV",
-        "decimalplace": 3,
-        "unit": "V"
-      },
-      "4": {
-        "range": "1000V",
-        "resolution": "0.1V",
-        "decimalplace": 4,
-        "unit": "V"
-      }
-    }
-  },
-  "241": {
-    "label": "VAC+VCC",
-    "ranges": {
-      "1": {
-        "range": "8V",
-        "resolution": "0.1mV",
-        "decimalplace": 1,
-        "unit": "V"
-      },
-      "2": {
-        "range": "80V",
-        "resolution": "1mV",
-        "decimalplace": 2,
-        "unit": "V"
-      },
-      "3": {
-        "range": "800V",
-        "resolution": "10mV",
-        "decimalplace": 3,
-        "unit": "V"
-      },
-      "4": {
-        "range": "1000V",
-        "resolution": "0.1V",
-        "decimalplace": 4,
-        "unit": "V"
-      }
-    }
-  },
-  "242": {
-    "label": "VCC dBm",
-    "ranges": {
-      "1": {
-        "range": "-80.00dBm ~ +80.00dBm",
-        "resolution": "0.01dBm",
-        "decimalplace": 2,
-        "unit": "Hz"
-      }
-    }
-  },
-  "248": {
-    "label": "VAC",
-    "ranges": {
-      "1": {
-        "range": "8V",
-        "resolution": "0.1mV",
-        "decimalplace": 1,
-        "unit": "V"
-      },
-      "2": {
-        "range": "80V",
-        "resolution": "1mV",
-        "decimalplace": 2,
-        "unit": "V"
-      },
-      "3": {
-        "range": "750V",
-        "resolution": "10mV",
-        "decimalplace": 3,
-        "unit": "V"
-      }
-    }
-  },
-  "249": {
-    "label": "VAC",
-    "ranges": {
-      "1": {
-        "range": "8V",
-        "resolution": "0.1mV",
-        "decimalplace": 1,
-        "unit": "V"
-      },
-      "2": {
-        "range": "80V",
-        "resolution": "1mV",
-        "decimalplace": 2,
-        "unit": "V"
-      },
-      "3": {
-        "range": "750V",
-        "resolution": "10mV",
-        "decimalplace": 3,
-        "unit": "V"
-      }
-    }
-  },
-  "250": {
-    "label": "VAC dBM",
-    "ranges": {
-      "1": {
-        "range": "-80.00dBm ~ +80.00dBm",
-        "resolution": "0.01dBm",
-        "decimalplace": 2,
-        "unit": "Hz"
-      }
-    }
-  }
+		}
+	},
+	"232": {
+		"label": "VCC",
+		"ranges": {
+			"1": {
+				"range": "80mV",
+				"resolution": "1µV",
+				"decimalplace": 2,
+				"unit": "mV"
+			},
+			"2": {
+				"range": "800mV",
+				"resolution": "10µV",
+				"decimalplace": 3,
+				"unit": "mV"
+			}
+		}
+	},
+	"233": {
+		"label": "VAC",
+		"ranges": {
+			"1": {
+				"range": "80mV",
+				"resolution": "1µV",
+				"decimalplace": 2,
+				"unit": "mV"
+			},
+			"2": {
+				"range": "800mV",
+				"resolution": "10µV",
+				"decimalplace": 3,
+				"unit": "mV"
+			}
+		}
+	},
+	"234": {
+		"label": "VCC dBm",
+		"ranges": {
+			"1": {
+				"range": "-80.00dBm ~ +80.00dBm",
+				"resolution": "0.01dBm",
+				"decimalplace": 2,
+				"unit": "Hz"
+			}
+		}
+	},
+	"240": {
+		"label": "VCC",
+		"ranges": {
+			"1": {
+				"range": "8V",
+				"resolution": "0.1mV",
+				"decimalplace": 1,
+				"unit": "V"
+			},
+			"2": {
+				"range": "80V",
+				"resolution": "1mV",
+				"decimalplace": 2,
+				"unit": "V"
+			},
+			"3": {
+				"range": "800V",
+				"resolution": "10mV",
+				"decimalplace": 3,
+				"unit": "V"
+			},
+			"4": {
+				"range": "1000V",
+				"resolution": "0.1V",
+				"decimalplace": 4,
+				"unit": "V"
+			}
+		}
+	},
+	"241": {
+		"label": "VAC+VCC",
+		"ranges": {
+			"1": {
+				"range": "8V",
+				"resolution": "0.1mV",
+				"decimalplace": 1,
+				"unit": "V"
+			},
+			"2": {
+				"range": "80V",
+				"resolution": "1mV",
+				"decimalplace": 2,
+				"unit": "V"
+			},
+			"3": {
+				"range": "800V",
+				"resolution": "10mV",
+				"decimalplace": 3,
+				"unit": "V"
+			},
+			"4": {
+				"range": "1000V",
+				"resolution": "0.1V",
+				"decimalplace": 4,
+				"unit": "V"
+			}
+		}
+	},
+	"242": {
+		"label": "VCC dBm",
+		"ranges": {
+			"1": {
+				"range": "-80.00dBm ~ +80.00dBm",
+				"resolution": "0.01dBm",
+				"decimalplace": 2,
+				"unit": "Hz"
+			}
+		}
+	},
+	"248": {
+		"label": "VAC",
+		"ranges": {
+			"1": {
+				"range": "8V",
+				"resolution": "0.1mV",
+				"decimalplace": 1,
+				"unit": "V"
+			},
+			"2": {
+				"range": "80V",
+				"resolution": "1mV",
+				"decimalplace": 2,
+				"unit": "V"
+			},
+			"3": {
+				"range": "750V",
+				"resolution": "10mV",
+				"decimalplace": 3,
+				"unit": "V"
+			}
+		}
+	},
+	"249": {
+		"label": "VAC",
+		"ranges": {
+			"1": {
+				"range": "8V",
+				"resolution": "0.1mV",
+				"decimalplace": 1,
+				"unit": "V"
+			},
+			"2": {
+				"range": "80V",
+				"resolution": "1mV",
+				"decimalplace": 2,
+				"unit": "V"
+			},
+			"3": {
+				"range": "750V",
+				"resolution": "10mV",
+				"decimalplace": 3,
+				"unit": "V"
+			}
+		}
+	},
+	"250": {
+		"label": "VAC dBM",
+		"ranges": {
+			"1": {
+				"range": "-80.00dBm ~ +80.00dBm",
+				"resolution": "0.01dBm",
+				"decimalplace": 2,
+				"unit": "Hz"
+			}
+		}
+	}
 }
