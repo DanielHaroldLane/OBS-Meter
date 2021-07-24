@@ -1,6 +1,6 @@
 const signMap = {
-  0x00: 'unsigned', // not sure what this is for
-  0x40: '', // positive sign
+  0x00: ' ', // unsigned sign (lol)
+  0x40: ' ', // positive sign
   0x50: '-', // negative sign
 }
 

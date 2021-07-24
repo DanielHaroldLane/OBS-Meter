@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>OBS Meter</title>
     <style>
-        html {
-            background-color: black;
-            color: #e95d00;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: x-large;
-            overflow: hidden;
-        }
+      html {
+        background-color: black;
+        color: #e95d00;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: x-large;
+        overflow: hidden;
+      }
 
-        #unit:not(:empty) {
-            margin-left: -72px;
-        }
+      div {
+        margin: 5px;
+      }
 
-        div {
-            margin: 5px;
-        }
-
-        #output {
-            display: none;
-        }
+      #output {
+        display: none;
+      }
     </style>
     <script type="text/javascript" src="segment-display.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="output">
-        <canvas id="display" width="280" height="34"></canvas>
-        <span id="unit"></span>
-        <canvas id="mode" width="280" height="34"></canvas>
+      <canvas id="display" width="180" height="34"></canvas>
+      <span id="unit"></span>
+      <canvas id="mode" width="280" height="34"></canvas>
     </div>
     <div id="ports">
-        <label for="comports">Com Port</label>
+      <label for="comports">Com Port</label>
 
-        <select name="comports" id="com-select">
-            <option value="">--Please choose a port--</option>
-        </select>
+      <select name="comports" id="com-select">
+        <option value="">--Please choose a port--</option>
+      </select>
     </div>
-</body>
+  </body>
 
-<script src="./serialcomms.js"></script>
-
+  <script src="./serialcomms.js"></script>
 </html>

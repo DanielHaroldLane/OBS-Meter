@@ -1,6 +1,5 @@
 require('./segment-display')
 const SerialPort = require('serialport')
-const fs = require('fs')
 const { signMap, digitMap, holdMap, rangeMap } = require('./maps')
 const { meterFunctions } = require('./meter-functions')
 
@@ -75,6 +74,7 @@ const decode = (data) => {
 }
 
 const getPattern = (decoded) =>
+  '#' +
   [
     ...new Array(decoded.range.decimalplace).fill('#'),
     '.',
@@ -82,7 +82,8 @@ const getPattern = (decoded) =>
   ].join('')
 
 const getDisplayValue = (decoded) =>
-  decoded.range.decimalplace
+  (decoded.sign === '-' ? '-' : ' ') +
+  (decoded.range.decimalplace
     ? [
         ...decoded.value.slice(0, decoded.range.decimalplace),
         '.',
@@ -91,7 +92,7 @@ const getDisplayValue = (decoded) =>
           decoded.value.length
         ),
       ].join('')
-    : decoded.value.join('')
+    : decoded.value.join(''))
 
 const pollSerialData = async () => {
   const buffer = new Buffer.from([0x89])
@@ -110,8 +111,13 @@ const pollSerialData = async () => {
   port.on('data', async (data) => {
     const dataArr = Array.from(data)
     const decoded = decode(dataArr)
-    display.pattern = getPattern(decoded)
-    display.setValue(getDisplayValue(decoded))
+    console.log(decoded)
+    const displayPattern = getPattern(decoded)
+    const displayValue = getDisplayValue(decoded)
+    console.log(':' + displayPattern + ':')
+    console.log(':' + displayValue + ':')
+    display.pattern = displayPattern
+    display.setValue(displayValue)
     mode.setValue(`MODE: ${decoded.meterFunction.label}`)
     unit.innerText = decoded.range.unit || ''
     await port.write(buffer)
