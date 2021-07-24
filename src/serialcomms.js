@@ -111,11 +111,10 @@ const pollSerialData = async () => {
   port.on('data', async (data) => {
     const dataArr = Array.from(data)
     const decoded = decode(dataArr)
-    console.log(decoded)
+
     const displayPattern = getPattern(decoded)
     const displayValue = getDisplayValue(decoded)
-    console.log(':' + displayPattern + ':')
-    console.log(':' + displayValue + ':')
+
     display.pattern = displayPattern
     display.setValue(displayValue)
     mode.setValue(`MODE: ${decoded.meterFunction.label}`)
