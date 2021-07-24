@@ -135,6 +135,28 @@
       }
     }
   },
+  "192": {
+    "label": "Temperature",
+    "ranges": {
+      "1": {
+        "range": "-50℃ ~ 1372℃",
+        "resolution": "0.1℃",
+        "decimalplace": 2,
+        "unit": "℃"
+      }
+    }
+  },
+  "193": {
+    "label": "Temperature",
+    "ranges": {
+      "1": {
+        "range": "-50℃ ~ 1372℃",
+        "resolution": "0.1℃",
+        "decimalplace": 4,
+        "unit": "℃"
+      }
+    }
+  },
   "216": {
     "label": "Diode/Continuity",
     "ranges": {
