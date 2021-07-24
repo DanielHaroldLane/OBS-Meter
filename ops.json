@@ -5,12 +5,14 @@
       "1": {
         "range": "8A",
         "resolution": "0.1mA",
-        "decimalplace": 1
+        "decimalplace": 1,
+        "unit": "A"
       },
       "2": {
         "range": "20A",
         "resolution": "1mA",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "A"
       }
     }
   },
@@ -20,12 +22,14 @@
       "1": {
         "range": "8A",
         "resolution": "0.1mA",
-        "decimalplace": 1
+        "decimalplace": 1,
+        "unit": "A"
       },
       "2": {
         "range": "20A",
         "resolution": "1mA",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "A"
       }
     }
   },
@@ -35,12 +39,14 @@
       "1": {
         "range": "8A",
         "resolution": "0.1mA",
-        "decimalplace": 1
+        "decimalplace": 1,
+        "unit": "A"
       },
       "2": {
         "range": "20A",
         "resolution": "1mA",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "A"
       }
     }
   },
@@ -50,12 +56,14 @@
       "1": {
         "range": "8A",
         "resolution": "0.1mA",
-        "decimalplace": 1
+        "decimalplace": 1,
+        "unit": "A"
       },
       "2": {
         "range": "20A",
         "resolution": "1mA",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "A"
       }
     }
   },
@@ -65,12 +73,14 @@
       "1": {
         "range": "80mA",
         "resolution": "1µA",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "mA"
       },
       "2": {
         "range": "800mA",
         "resolution": "10µA",
-        "decimalplace": 3
+        "decimalplace": 3,
+        "unit": "mA"
       }
     }
   },
@@ -80,12 +90,14 @@
       "1": {
         "range": "80mA",
         "resolution": "1µA",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "mA"
       },
       "2": {
         "range": "800mA",
         "resolution": "10µA",
-        "decimalplace": 3
+        "decimalplace": 3,
+        "unit": "mA"
       }
     }
   },
@@ -95,12 +107,14 @@
       "1": {
         "range": "80mA",
         "resolution": "1µA",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "mA"
       },
       "2": {
         "range": "800mA",
         "resolution": "10µA",
-        "decimalplace": 3
+        "decimalplace": 3,
+        "unit": "mA"
       }
     }
   },
@@ -110,12 +124,55 @@
       "1": {
         "range": "80mA",
         "resolution": "1µA",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "mA"
       },
       "2": {
         "range": "800mA",
         "resolution": "10µA",
-        "decimalplace": 3
+        "decimalplace": 3,
+        "unit": "mA"
+      }
+    }
+  },
+  "224": {
+    "label": "Resistance",
+    "ranges": {
+      "1": {
+        "range": "800 Ω",
+        "resolution": "0.01 Ω",
+        "decimalplace": 3,
+        "unit": "Ω"
+      },
+      "2": {
+        "range": "8 kΩ",
+        "resolution": "0.1 Ω",
+        "decimalplace": 1,
+        "unit": "kΩ"
+      },
+      "3": {
+        "range": "80 kΩ",
+        "resolution": "1 Ω",
+        "decimalplace": 2,
+        "unit": "kΩ"
+      },
+      "4": {
+        "range": "800 kΩ",
+        "resolution": "10 Ω",
+        "decimalplace": 3,
+        "unit": "kΩ"
+      },
+      "5": {
+        "range": "8 MΩ",
+        "resolution": "100 Ω",
+        "decimalplace": 1,
+        "unit": "MΩ"
+      },
+      "6": {
+        "range": "80 MΩ",
+        "resolution": "1 kΩ",
+        "decimalplace": 2,
+        "unit": "MΩ"
       }
     }
   },
@@ -125,12 +182,14 @@
       "1": {
         "range": "80mV",
         "resolution": "1µV",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "mV"
       },
       "2": {
         "range": "800mV",
         "resolution": "10µV",
-        "decimalplace": 3
+        "decimalplace": 3,
+        "unit": "mV"
       }
     }
   },
@@ -140,12 +199,14 @@
       "1": {
         "range": "80mV",
         "resolution": "1µV",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "mV"
       },
       "2": {
         "range": "800mV",
         "resolution": "10µV",
-        "decimalplace": 3
+        "decimalplace": 3,
+        "unit": "mV"
       }
     }
   },
@@ -155,7 +216,8 @@
       "1": {
         "range": "-80.00dBm ~ +80.00dBm",
         "resolution": "0.01dBm",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "Hz"
       }
     }
   },
@@ -165,22 +227,26 @@
       "1": {
         "range": "8V",
         "resolution": "0.1mV",
-        "decimalplace": 1
+        "decimalplace": 1,
+        "unit": "V"
       },
       "2": {
         "range": "80V",
         "resolution": "1mV",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "V"
       },
       "3": {
         "range": "800V",
         "resolution": "10mV",
-        "decimalplace": 3
+        "decimalplace": 3,
+        "unit": "V"
       },
       "4": {
         "range": "1000V",
         "resolution": "0.1V",
-        "decimalplace": 4
+        "decimalplace": 4,
+        "unit": "V"
       }
     }
   },
@@ -190,22 +256,26 @@
       "1": {
         "range": "8V",
         "resolution": "0.1mV",
-        "decimalplace": 1
+        "decimalplace": 1,
+        "unit": "V"
       },
       "2": {
         "range": "80V",
         "resolution": "1mV",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "V"
       },
       "3": {
         "range": "800V",
         "resolution": "10mV",
-        "decimalplace": 3
+        "decimalplace": 3,
+        "unit": "V"
       },
       "4": {
         "range": "1000V",
         "resolution": "0.1V",
-        "decimalplace": 4
+        "decimalplace": 4,
+        "unit": "V"
       }
     }
   },
@@ -215,7 +285,8 @@
       "1": {
         "range": "-80.00dBm ~ +80.00dBm",
         "resolution": "0.01dBm",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "Hz"
       }
     }
   },
@@ -225,17 +296,20 @@
       "1": {
         "range": "8V",
         "resolution": "0.1mV",
-        "decimalplace": 1
+        "decimalplace": 1,
+        "unit": "V"
       },
       "2": {
         "range": "80V",
         "resolution": "1mV",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "V"
       },
       "3": {
         "range": "750V",
         "resolution": "10mV",
-        "decimalplace": 3
+        "decimalplace": 3,
+        "unit": "V"
       }
     }
   },
@@ -245,17 +319,20 @@
       "1": {
         "range": "8V",
         "resolution": "0.1mV",
-        "decimalplace": 1
+        "decimalplace": 1,
+        "unit": "V"
       },
       "2": {
         "range": "80V",
         "resolution": "1mV",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "V"
       },
       "3": {
         "range": "750V",
         "resolution": "10mV",
-        "decimalplace": 3
+        "decimalplace": 3,
+        "unit": "V"
       }
     }
   },
@@ -265,7 +342,8 @@
       "1": {
         "range": "-80.00dBm ~ +80.00dBm",
         "resolution": "0.01dBm",
-        "decimalplace": 2
+        "decimalplace": 2,
+        "unit": "Hz"
       }
     }
   }
